@@ -11,7 +11,7 @@ const TrackerContainer = (props) => {
         return ( <TrackerCard 
             name = {employee.name}
             role = {employee.role}
-            key = {employee.id} />
+            key = {employee.id}/>
         )
     })
 
