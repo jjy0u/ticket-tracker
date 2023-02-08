@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className='header'>Ticket Tracker</h1>
       <SearchFilter handleInput={handleInput}/>
       <TrackerContainer teamArr = {employees}/>
     </div>

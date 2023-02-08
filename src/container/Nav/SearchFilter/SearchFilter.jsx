@@ -4,7 +4,7 @@ const SearchFilter = (props) => {
 
     return(
         <div className="search">
-            <label htmlFor="search-bar">Search</label>
+            <label htmlFor="search-bar">Search Name </label>
             <input type="text" id="search-bar" onInput={handleInput}/>
         </div>
     )
