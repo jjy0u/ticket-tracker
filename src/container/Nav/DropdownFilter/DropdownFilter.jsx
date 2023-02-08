@@ -2,10 +2,10 @@ import "./DropdownFilter.scss"
 
 const DropdownFilter = (props) => {
 
-    const {role} = props
+    const {role, handleClick} = props
 
     return(
-        <option value={role}>{role}</option>
+        <option value={role} onClick={handleClick}>{role}</option>
     )
 }
 

@@ -15,11 +15,20 @@ function App() {
     setEmployees(filteredArray)
     }
 
+    const handleClick = (event) => {
+    const option = event.target.value
+    const filteredArray = team.filter(employee => employee.role.includes(option))
+    setEmployees(filteredArray)
+    }
+
+  //const filteredRoles = [...new Set(team)]
+  //console.log(filteredRoles)
+
 
   return (
     <div className="App">
       <h1 className='header'>Ticket Tracker</h1>
-      <DropdownContainer teamArr = {team}/>
+      <DropdownContainer teamArr = {team} handleClick = {handleClick}/>
       <SearchFilter handleInput={handleInput}/>
       <TrackerContainer teamArr = {employees}/>
     </div>
