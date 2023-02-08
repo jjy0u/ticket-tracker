@@ -9,27 +9,27 @@ function App() {
   
   const [employees, setEmployees] = useState(team)
 
-  const handleInput = (event) => {
+    const handleInput = (event) => {
     const searchTerm = event.target.value.toLowerCase()
     const filteredArray = team.filter(employee => employee.name.toLowerCase().includes(searchTerm))
     setEmployees(filteredArray)
     }
 
-    const handleClick = (event) => {
+    const handleDropdown = (event) => {
     const option = event.target.value
     const filteredArray = team.filter(employee => employee.role.includes(option))
     setEmployees(filteredArray)
     }
 
-  //const filteredRoles = [...new Set(team)]
-  //console.log(filteredRoles)
-
+    const filteredRoles = [... new Set(team.map(employee => employee.role))]
 
   return (
     <div className="App">
       <h1 className='header'>Ticket Tracker</h1>
-      <DropdownContainer teamArr = {team} handleClick = {handleClick}/>
+      <div className='nav'>
       <SearchFilter handleInput={handleInput}/>
+      <DropdownContainer roleArr = {filteredRoles} handleDropdown = {handleDropdown}/>
+      </div>
       <TrackerContainer teamArr = {employees}/>
     </div>
   );

@@ -4,21 +4,24 @@ import DropdownFilter from '../DropdownFilter/DropdownFilter'
 
 
 const DropdownContainer = (props) => {
-    const {teamArr, handleClick} = props
+    const {roleArr, handleDropdown} = props
 
 
-  const rolesJSX = teamArr.map((employee) => {
+  const rolesJSX = roleArr.map((role, index) => {
     return ( <DropdownFilter 
-          role = {employee.role}
-          key = {employee.id} 
-          handleClick = {handleClick}/>
+          role = {role}
+          key = {index + 1}
+          />
       )
   })
 
   return (
-    <select name="Role " id="Roles">
+    <div>
+    <label htmlFor="Roles">Roles: </label>
+    <select name="Roles" id="Roles" onChange = {handleDropdown}>
         {rolesJSX}
     </select>
+    </div>
     )
 }
 
