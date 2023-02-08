@@ -21,6 +21,7 @@ function App() {
     setEmployees(filteredArray)
     }
 
+    // eslint-disable-next-line 
     const filteredRoles = [... new Set(team.map(employee => employee.role))]
 
   return (
