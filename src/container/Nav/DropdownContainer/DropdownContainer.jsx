@@ -1,5 +1,4 @@
 import React from 'react'
-import team from '../../../data/employeeData'
 import DropdownFilter from '../DropdownFilter/DropdownFilter'
 
 

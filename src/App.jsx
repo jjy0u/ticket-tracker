@@ -17,7 +17,7 @@ function App() {
 
     const handleDropdown = (event) => {
     const option = event.target.value
-    const filteredArray = team.filter(employee => employee.role.includes(option))
+    const filteredArray = team.filter(employee => employee.role === option)
     setEmployees(filteredArray)
     }
 
