@@ -6,8 +6,8 @@ const TrackerCard = (props) => {
     const {name, role} = props
   return (
     <div className='tracker-card'>
-        <h1>Name: {name}</h1>
-        <h2>Role: {role}</h2>
+        <h1 className='tracker-card__name'>{name}</h1>
+        <h2 className='tracker-card__role'>{role}</h2>
         <Counter/>
     </div>
   )
